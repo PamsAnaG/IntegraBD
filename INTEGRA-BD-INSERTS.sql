@@ -64,3 +64,34 @@ INSERT INTO USUARIO (NOMBRE, APPATERNO, APMATERNO, USUARIO, PASSWORD, CORREO_ELE
 VALUES ('Leobardo', 'Jimenez', 'Sanchez', 'LJS', 'PASSWORD', 'pame23@gmail.com', '5527299581', 4, 'A')
 
 INSERT INTO RECURSO (ID_USUARIO, ESTATUS, TIPO_RECURSO, COSTO_HORA) VALUES (2, 'A', 'Java Sr', 100);
+
+-- TIPOS DE TAREA
+INSERT INTO TIPO_ALERTA (NOMBRE, DESCRIPCION, ESTATUS) VALUES ('P', 'Programación de tarea en calendario', 'A');
+INSERT INTO TIPO_ALERTA (NOMBRE, DESCRIPCION, ESTATUS) VALUES ('T', 'Mensaje de texto', 'A');
+INSERT INTO TIPO_ALERTA (NOMBRE, DESCRIPCION, ESTATUS) VALUES ('A', 'Aviso mediante push notification al movil', 'A');
+INSERT INTO TIPO_ALERTA (NOMBRE, DESCRIPCION, ESTATUS) VALUES ('C', 'Correo electrónico', 'A');
+
+-- FASE DE TAREA EN LA QUE SE ENVIARÁ LA NOTIFICACIÓN
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Inicio tarea', 'La notificación se envia al inicio de la tarea, de acuerdo a la fecha actual del sistema y a la fecha configurada de la tarea');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Fin tarea', 'La notificación se envia cuando la tarea haya terminado, de acuerdo a la fecha actual del sistema y a la fecha configurada de la tarea');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Atraso', 'La notificación se envia cuando la tarea presente atraso, de acuerdo a la fecha actual del sistema, a la fecha configurada de la tarea y a la captura de radar correspondiente');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Procentaje de avance', 'La notificación se envia cuando la tarea alcance el porcentaje de avance configurado de acuerdo a la duración de la misma y las capturas de radar');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Liberación de recurso', 'La notifcación se envía cuando el recurso responsable haya concluído la tarea.');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Inicio de tarea anticipado', 'La notifcación se envía si la tarea inicia de manera anticipada de acuerdo a la fecha de la captura de radar y a la fecha de inicio de la tarea en el plan');
+
+INSERT INTO FASE_TAREA_ALERTA (NOMBRE, DESCRIPCION) 
+VALUES ('Fin de tarea anticipado', 'La notifcación se envía si la tarea termina de manera anticipada de acuerdo a la fecha de la captura de radar y a la fecha de fin de la tarea en el plan');
+
+
+
